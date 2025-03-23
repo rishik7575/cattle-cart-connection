@@ -17,50 +17,50 @@ const Poultry = () => {
           {
             id: 'chicken-broiler',
             name: 'Broiler Chicken',
-            price: 15,
+            price: 15.99,
             image: 'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Fast-growing meat chicken breed, ready for market in just 6-8 weeks with excellent feed conversion ratio.'
+            description: 'Premium quality meat chicken, raised without antibiotics and ready for processing in 6-8 weeks.'
           },
           {
             id: 'chicken-layer',
             name: 'Layer Chicken',
-            price: 18,
+            price: 18.50,
             image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Productive egg-laying hen that produces up to 300 eggs per year with efficient feed conversion.'
+            description: 'Highly productive egg-laying hens that produce up to 300 large, brown eggs annually.'
           },
           {
             id: 'duck-pekin',
             name: 'Pekin Duck',
-            price: 25,
+            price: 24.99,
             image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Fast-growing meat duck with white feathers and orange bills, reaching market weight in just 7-8 weeks.'
+            description: 'Fast-growing meat duck with excellent feed conversion, ideal for both meat and egg production.'
           },
           {
             id: 'turkey-broad-breasted',
             name: 'Broad Breasted Turkey',
-            price: 45,
+            price: 42.99,
             image: 'https://images.unsplash.com/photo-1542558817913-6480352ced6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Large commercial turkey breed with rapid growth rate and excellent meat yield, ideal for large-scale production.'
+            description: 'Traditional holiday turkey breed that grows quickly and provides excellent meat yield.'
           },
           {
             id: 'quail-coturnix',
             name: 'Coturnix Quail',
-            price: 8,
+            price: 8.99,
             image: 'https://images.unsplash.com/photo-1613468583745-8a37ee14ff38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Fast-maturing quail variety that begins laying eggs at 6-8 weeks and produces 300+ eggs annually.'
+            description: 'Fast-maturing quail variety that begins egg production at just 6-8 weeks of age.'
           },
           {
             id: 'guinea-fowl',
             name: 'Guinea Fowl',
-            price: 22,
+            price: 22.50,
             image: 'https://images.unsplash.com/photo-1600880200963-11a8a3daf8a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Low-maintenance, disease-resistant fowl known for pest control and producing lean, flavorful meat similar to wild game.'
+            description: 'Hardy, disease-resistant birds known for their pest control abilities and flavorful meat.'
           }
         ]);
         setIsLoading(false);
@@ -70,13 +70,16 @@ const Poultry = () => {
     loadProducts();
   }, []);
   
-  // Filter categories if needed
+  // Filter categories
   const categories = ['All', 'Chicken', 'Duck', 'Turkey', 'Quail', 'Guinea Fowl'];
   const [activeCategory, setActiveCategory] = useState('All');
   
   const filteredProducts = activeCategory === 'All' 
     ? products 
-    : products.filter(product => product.name.toLowerCase().includes(activeCategory.toLowerCase()));
+    : products.filter(product => 
+      product.name.toLowerCase().includes(activeCategory.toLowerCase()) ||
+      product.description.toLowerCase().includes(activeCategory.toLowerCase())
+    );
   
   // Animation variants
   const containerVariants = {
@@ -96,7 +99,7 @@ const Poultry = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Poultry farm"
+            alt="Premium poultry"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30" />
@@ -111,7 +114,7 @@ const Poultry = () => {
           >
             <h1 className="text-3xl md:text-5xl font-semibold mb-4">Premium Poultry</h1>
             <p className="text-lg text-white/90">
-              Explore our selection of high-quality poultry breeds, including chickens, ducks, turkeys, and more.
+              Explore our selection of high-quality poultry breeds - from chickens and ducks to turkeys and specialty birds.
             </p>
           </motion.div>
         </div>

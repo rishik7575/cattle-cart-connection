@@ -29,8 +29,7 @@ const App = () => (
             <div className="pt-20">
               <Routes>
                 <Route path="/" element={<Index />} />
-                <Route path="/cattle" element={<Cattle />} />
-                <Route path="/dairy" element={<Dairy />} />
+                <Route path="/heritage" element={<Cattle />} />
                 <Route path="/poultry" element={<Poultry />} />
                 <Route path="/needs" element={<Needs />} />
                 <Route path="*" element={<NotFound />} />
