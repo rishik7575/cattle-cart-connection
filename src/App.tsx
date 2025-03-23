@@ -8,6 +8,7 @@ import { CartProvider } from "./context/CartContext";
 import Index from "./pages/Index";
 import Cattle from "./pages/Cattle";
 import Dairy from "./pages/Dairy";
+import Poultry from "./pages/Poultry";
 import Needs from "./pages/Needs";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
@@ -30,6 +31,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/cattle" element={<Cattle />} />
                 <Route path="/dairy" element={<Dairy />} />
+                <Route path="/poultry" element={<Poultry />} />
                 <Route path="/needs" element={<Needs />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

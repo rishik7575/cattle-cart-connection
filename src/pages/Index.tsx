@@ -41,6 +41,12 @@ const Index = () => {
       link: "/dairy"
     },
     {
+      title: "Premium Poultry",
+      description: "Browse our selection of healthy poultry breeds, including chickens, ducks, turkeys, and more.",
+      image: "https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      link: "/poultry"
+    },
+    {
       title: "Farming Essentials",
       description: "Find everything you need for successful cattle farming and dairy production.",
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
@@ -69,10 +75,10 @@ const Index = () => {
             className="max-w-3xl text-white"
           >
             <h1 className="text-4xl md:text-6xl font-semibold mb-6">
-              Premium Cattle and Dairy Products
+              Premium Livestock and Farm Products
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl">
-              Experience the finest selection of ethically raised cattle and farm-fresh dairy products 
+              Experience the finest selection of ethically raised livestock and farm-fresh products 
               for your agricultural and consumption needs.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -96,7 +102,7 @@ const Index = () => {
                   to="/dairy" 
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium inline-flex items-center"
                 >
-                  Browse Dairy Products
+                  Browse Products
                 </Link>
               </motion.div>
             </div>
@@ -117,7 +123,7 @@ const Index = () => {
           </motion.h2>
           
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -164,7 +170,7 @@ const Index = () => {
           >
             <h2 className="text-3xl font-semibold mb-8">What Our Customers Say</h2>
             <blockquote className="text-xl text-gray-600 italic mb-6">
-              "The quality of cattle and dairy products from FarmFresh has been exceptional. 
+              "The quality of livestock and farm products from FarmFresh has been exceptional. 
               Their commitment to ethical farming practices and customer service sets them apart in the industry."
             </blockquote>
             <p className="font-medium">John D. — Dairy Farmer</p>
@@ -179,7 +185,7 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-semibold mb-4">FarmFresh</h3>
               <p className="text-gray-400">
-                Premium cattle and dairy products for your agricultural and consumption needs.
+                Premium livestock and farm products for your agricultural and consumption needs.
               </p>
             </div>
             <div>
@@ -188,6 +194,7 @@ const Index = () => {
                 <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/cattle" className="text-gray-400 hover:text-white transition-colors">Cattle</Link></li>
                 <li><Link to="/dairy" className="text-gray-400 hover:text-white transition-colors">Dairy Products</Link></li>
+                <li><Link to="/poultry" className="text-gray-400 hover:text-white transition-colors">Poultry</Link></li>
                 <li><Link to="/needs" className="text-gray-400 hover:text-white transition-colors">Farming Needs</Link></li>
               </ul>
             </div>
