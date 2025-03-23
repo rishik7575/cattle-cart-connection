@@ -62,7 +62,7 @@
   }
   
   /* Transition for all interactive elements */
-  a, button, .transition-all {
+  a, button, .interactive-element {
     @apply transition-all duration-300 ease-in-out;
   }
   
