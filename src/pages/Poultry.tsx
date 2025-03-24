@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ProductCard from '@/components/ProductCard';
 import { Product } from '@/context/CartContext';
-import { Egg, Chicken } from 'lucide-react';
 
 const Poultry = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -18,61 +17,61 @@ const Poultry = () => {
           {
             id: 'chicken-broiler',
             name: 'Broiler Chicken',
-            price: 8.99,
+            price: 15.99,
             image: 'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Farm-raised broiler chickens, perfect for roasting. Raised without antibiotics.'
+            description: 'Premium quality meat chicken, raised without antibiotics and ready for processing in 6-8 weeks.'
           },
           {
-            id: 'eggs-free-range',
-            name: 'Free-Range Eggs',
-            price: 5.49,
-            image: 'https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            id: 'chicken-layer',
+            name: 'Layer Chicken',
+            price: 18.50,
+            image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Fresh eggs from free-range hens. Rich in flavor with bright orange yolks.'
+            description: 'Highly productive egg-laying hens that produce up to 300 large, brown eggs annually.'
           },
           {
-            id: 'chicken-whole',
-            name: 'Whole Chicken',
-            price: 12.99,
-            image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            id: 'duck-pekin',
+            name: 'Pekin Duck',
+            price: 24.99,
+            image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Pasture-raised whole chicken, hormone-free and naturally processed.'
+            description: 'Fast-growing meat duck with excellent feed conversion, ideal for both meat and egg production.'
           },
           {
-            id: 'duck-breast',
-            name: 'Duck Breast',
-            price: 16.99,
-            image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            id: 'turkey-broad-breasted',
+            name: 'Broad Breasted Turkey',
+            price: 42.99,
+            image: 'https://images.unsplash.com/photo-1542558817913-6480352ced6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Premium duck breast from our farm-raised Pekin ducks. Rich flavor and tender texture.'
+            description: 'Traditional holiday turkey breed that grows quickly and provides excellent meat yield.'
           },
           {
-            id: 'chicken-legs',
-            name: 'Chicken Legs',
-            price: 7.99,
-            image: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            id: 'quail-coturnix',
+            name: 'Coturnix Quail',
+            price: 8.99,
+            image: 'https://images.unsplash.com/photo-1613468583745-8a37ee14ff38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Juicy chicken legs perfect for grilling or baking. From our pasture-raised chickens.'
+            description: 'Fast-maturing quail variety that begins egg production at just 6-8 weeks of age.'
           },
           {
-            id: 'quail-eggs',
-            name: 'Fresh Quail Eggs',
-            price: 9.99,
-            image: 'https://images.unsplash.com/photo-1524593656068-76ff79251ad2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            id: 'guinea-fowl',
+            name: 'Guinea Fowl',
+            price: 22.50,
+            image: 'https://images.unsplash.com/photo-1600880200963-11a8a3daf8a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'poultry',
-            description: 'Delicate quail eggs with spotted shells. Perfect for gourmet dishes and appetizers.'
+            description: 'Hardy, disease-resistant birds known for their pest control abilities and flavorful meat.'
           }
         ]);
         setIsLoading(false);
-      }, 800);
+      }, 800); // Simulate network delay
     };
     
     loadProducts();
   }, []);
   
   // Filter categories
-  const categories = ['All', 'Chicken', 'Duck', 'Eggs'];
+  const categories = ['All', 'Chicken', 'Duck', 'Turkey', 'Quail', 'Guinea Fowl'];
   const [activeCategory, setActiveCategory] = useState('All');
   
   const filteredProducts = activeCategory === 'All' 
@@ -99,8 +98,8 @@ const Poultry = () => {
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Fresh poultry products"
+            src="https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Premium poultry"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30" />
@@ -113,9 +112,9 @@ const Poultry = () => {
             transition={{ duration: 0.6 }}
             className="max-w-2xl text-white"
           >
-            <h1 className="text-3xl md:text-5xl font-semibold mb-4">Fresh Poultry Products</h1>
+            <h1 className="text-3xl md:text-5xl font-semibold mb-4">Premium Poultry</h1>
             <p className="text-lg text-white/90">
-              Explore our selection of high-quality poultry products from our free-range, pasture-raised birds.
+              Explore our selection of high-quality poultry breeds - from chickens and ducks to turkeys and specialty birds.
             </p>
           </motion.div>
         </div>
@@ -156,11 +155,7 @@ const Poultry = () => {
             </div>
           ) : (
             <>
-              <div className="flex items-center gap-2 mb-8">
-                <h2 className="text-2xl font-semibold">{activeCategory} Poultry Products</h2>
-                {activeCategory === 'Chicken' && <Chicken className="h-6 w-6" />}
-                {activeCategory === 'Eggs' && <Egg className="h-6 w-6" />}
-              </div>
+              <h2 className="text-2xl font-semibold mb-8">{activeCategory} Poultry</h2>
               
               {filteredProducts.length === 0 ? (
                 <p className="text-center py-12 text-gray-500">No products found in this category.</p>
