@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import Index from "./pages/Index";
 import Cattle from "./pages/Cattle";
-import Dairy from "./pages/Dairy";
+import Honey from "./pages/Honey";
 import Poultry from "./pages/Poultry";
 import Needs from "./pages/Needs";
 import NotFound from "./pages/NotFound";
@@ -30,6 +30,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/heritage" element={<Cattle />} />
+                <Route path="/honey" element={<Honey />} />
                 <Route path="/poultry" element={<Poultry />} />
                 <Route path="/needs" element={<Needs />} />
                 <Route path="*" element={<NotFound />} />

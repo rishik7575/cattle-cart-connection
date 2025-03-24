@@ -29,28 +29,28 @@ const Index = () => {
   // Featured sections
   const featuredSections = [
     {
-      title: "Heritage Poultry Breeds",
-      description: "Explore our selection of rare and heritage poultry breeds, raised with care and ethical practices.",
-      image: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Heritage Bees",
+      description: "Explore our selection of rare and heritage bee breeds, raised with care and ethical practices.",
+      image: "https://images.unsplash.com/photo-1587049633312-d628ae40a0fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       link: "/heritage"
     },
     {
-      title: "Premium Poultry",
-      description: "Discover our selection of premium poultry breeds, including chickens, ducks, turkeys, and specialty birds.",
-      image: "https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/poultry"
+      title: "Premium Honey",
+      description: "Discover our selection of premium honey products, including raw, comb, and specialty infused varieties.",
+      image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      link: "/honey"
     },
     {
-      title: "Poultry Farming Needs",
-      description: "Find everything you need for successful poultry farming - from feed and equipment to healthcare products.",
+      title: "Beekeeping Supplies",
+      description: "Find everything you need for successful beekeeping - from equipment and protective gear to hive maintenance products.",
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       link: "/needs"
     },
     {
-      title: "Egg Production",
-      description: "Maximize your egg production with our selection of layer breeds and essential supplies.",
-      image: "https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/poultry"
+      title: "Honey Production",
+      description: "Maximize your honey production with our selection of beekeeping products and essential supplies.",
+      image: "https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      link: "/honey"
     }
   ];
   
@@ -60,8 +60,8 @@ const Index = () => {
       <section className="relative h-[80vh] min-h-[600px] overflow-hidden flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Free range poultry"
+            src="https://images.unsplash.com/photo-1587049633312-d628ae40a0fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Honey and beekeeping"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -75,11 +75,11 @@ const Index = () => {
             className="max-w-3xl text-white"
           >
             <h1 className="text-4xl md:text-6xl font-semibold mb-6">
-              Premium Poultry and Farm Products
+              HoneyHaven - Premium Bee Farm Products
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl">
-              Experience the finest selection of ethically raised poultry and farm-fresh products 
-              for your agricultural and consumption needs.
+              Experience the finest selection of ethically produced honey and bee-related products 
+              for your culinary and beekeeping needs.
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.div
@@ -87,10 +87,10 @@ const Index = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Link 
-                  to="/poultry" 
+                  to="/honey" 
                   className="bg-white text-black px-8 py-3 rounded-lg font-medium inline-flex items-center"
                 >
-                  Explore Poultry
+                  Explore Honey
                   <ChevronRight size={18} className="ml-2" />
                 </Link>
               </motion.div>
@@ -102,7 +102,7 @@ const Index = () => {
                   to="/heritage" 
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium inline-flex items-center"
                 >
-                  Heritage Breeds
+                  Heritage Bees
                 </Link>
               </motion.div>
             </div>
@@ -170,10 +170,10 @@ const Index = () => {
           >
             <h2 className="text-3xl font-semibold mb-8">What Our Customers Say</h2>
             <blockquote className="text-xl text-gray-600 italic mb-6">
-              "The quality of poultry and farming products from PoultryFresh has been exceptional. 
-              Their commitment to ethical farming practices and customer service sets them apart in the industry."
+              "The quality of honey and beekeeping products from HoneyHaven has been exceptional. 
+              Their commitment to ethical beekeeping practices and customer service sets them apart in the industry."
             </blockquote>
-            <p className="font-medium">Sarah M. — Poultry Farmer</p>
+            <p className="font-medium">Sarah M. — Beekeeper</p>
           </motion.div>
         </div>
       </section>
@@ -183,28 +183,28 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">PoultryFresh</h3>
+              <h3 className="text-xl font-semibold mb-4">HoneyHaven</h3>
               <p className="text-gray-400">
-                Premium poultry and farm products for your agricultural and consumption needs.
+                Premium honey and bee farm products for your culinary and beekeeping needs.
               </p>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/heritage" className="text-gray-400 hover:text-white transition-colors">Heritage Breeds</Link></li>
-                <li><Link to="/poultry" className="text-gray-400 hover:text-white transition-colors">Poultry</Link></li>
-                <li><Link to="/needs" className="text-gray-400 hover:text-white transition-colors">Farming Needs</Link></li>
+                <li><Link to="/heritage" className="text-gray-400 hover:text-white transition-colors">Heritage Bees</Link></li>
+                <li><Link to="/honey" className="text-gray-400 hover:text-white transition-colors">Honey Products</Link></li>
+                <li><Link to="/needs" className="text-gray-400 hover:text-white transition-colors">Beekeeping Supplies</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-4">Contact Us</h4>
-              <p className="text-gray-400 mb-2">Email: info@poultryfresh.com</p>
+              <p className="text-gray-400 mb-2">Email: info@honeyhaven.com</p>
               <p className="text-gray-400">Phone: (123) 456-7890</p>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-            <p>© {new Date().getFullYear()} PoultryFresh. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} HoneyHaven. All rights reserved.</p>
           </div>
         </div>
       </footer>
