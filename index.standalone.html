@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FarmFresh - Cattle Cart Connection</title>
-  <meta name="description" content="FarmFresh - Buy quality cattle and dairy products">
+  <title>HoneyHaven - Premium Honey Products</title>
+  <meta name="description" content="HoneyHaven - Buy quality honey and beekeeping products">
   
   <style>
     /* Tailwind base styling and custom styles */
@@ -16,7 +16,7 @@
       --card-foreground: 240 10% 3.9%;
       --popover: 0 0% 100%;
       --popover-foreground: 240 10% 3.9%;
-      --primary: 240 5.9% 10%;
+      --primary: 43 96% 56%;
       --primary-foreground: 0 0% 98%;
       --secondary: 240 4.8% 95.9%;
       --secondary-foreground: 240 5.9% 10%;
@@ -127,7 +127,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #000;
+      background-color: #f9b82d;
     }
 
     .cart-btn {
@@ -156,7 +156,7 @@
       font-size: 0.75rem;
       font-weight: 700;
       color: white;
-      background-color: black;
+      background-color: #f9b82d;
       border-radius: 9999px;
     }
 
@@ -290,7 +290,7 @@
     }
 
     .filter-btn.active {
-      background-color: #000;
+      background-color: #f9b82d;
       color: white;
     }
 
@@ -423,7 +423,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      background-color: black;
+      background-color: #f9b82d;
       color: white;
       border: none;
       border-radius: 0.5rem;
@@ -432,7 +432,7 @@
     }
 
     .add-to-cart-btn:hover {
-      background-color: #1f2937;
+      background-color: #e59f1f;
       transform: scale(1.02);
     }
 
@@ -548,7 +548,7 @@
 
     .continue-shopping-btn {
       padding: 0.5rem 1.5rem;
-      background-color: black;
+      background-color: #f9b82d;
       color: white;
       border: none;
       border-radius: 0.5rem;
@@ -699,7 +699,7 @@
     .checkout-btn {
       width: 100%;
       padding: 0.75rem 0;
-      background-color: black;
+      background-color: #f9b82d;
       color: white;
       border: none;
       border-radius: 0.5rem;
@@ -736,6 +736,61 @@
       opacity: 1;
       transform: translateY(0);
     }
+    
+    /* Footer */
+    .footer {
+      background-color: #1f2937;
+      color: white;
+      padding: 3rem 0 1rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .footer-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-link {
+      display: block;
+      color: #d1d5db;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      transition: color 200ms;
+    }
+    
+    .footer-link:hover {
+      color: white;
+    }
+    
+    .footer-text {
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+    
+    .copyright {
+      text-align: center;
+      color: #9ca3af;
+      border-top: 1px solid #374151;
+      padding-top: 1.5rem;
+      font-size: 0.875rem;
+    }
   </style>
 </head>
 <body>
@@ -743,14 +798,14 @@
     <header class="header">
       <div class="container">
         <div class="header-content">
-          <a href="#" class="logo" data-page="home">FarmFresh</a>
+          <a href="#" class="logo" data-page="home">HoneyHaven</a>
           
           <nav class="nav">
             <ul class="nav-list">
               <li><a href="#" class="nav-link" data-page="home">Home</a></li>
-              <li><a href="#" class="nav-link active" data-page="cattle">Cattle</a></li>
-              <li><a href="#" class="nav-link" data-page="dairy">Dairy Products</a></li>
-              <li><a href="#" class="nav-link" data-page="needs">Needs</a></li>
+              <li><a href="#" class="nav-link active" data-page="honey">Honey Products</a></li>
+              <li><a href="#" class="nav-link" data-page="beekeeping">Beekeeping</a></li>
+              <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
             </ul>
           </nav>
           
@@ -781,31 +836,31 @@
             <a href="#" class="mobile-nav-link" data-page="home">Home</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link active" data-page="cattle">Cattle</a>
+            <a href="#" class="mobile-nav-link active" data-page="honey">Honey Products</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link" data-page="dairy">Dairy Products</a>
+            <a href="#" class="mobile-nav-link" data-page="beekeeping">Beekeeping</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link" data-page="needs">Needs</a>
+            <a href="#" class="mobile-nav-link" data-page="about">About Us</a>
           </li>
         </ul>
       </div>
     </header>
     
-    <!-- Cattle Page Content -->
-    <main id="cattle-page" class="page active">
+    <!-- Honey Products Page Content -->
+    <main id="honey-page" class="page active">
       <section class="hero">
         <div class="hero-bg">
-          <img src="https://images.unsplash.com/photo-1566126003133-3f5974b4638f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Cattle grazing in field" class="hero-img">
+          <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Jars of honey with honeycomb" class="hero-img">
           <div class="hero-overlay"></div>
         </div>
         
         <div class="container">
           <div class="hero-content">
-            <h1 class="hero-title">Premium Cattle</h1>
+            <h1 class="hero-title">Pure Honey Products</h1>
             <p class="hero-text">
-              Explore our selection of high-quality cattle breeds, including cows, buffaloes, and goats.
+              Explore our selection of premium honey varieties, harvested with care from our own apiaries.
             </p>
           </div>
         </div>
@@ -815,16 +870,16 @@
         <div class="container">
           <div class="filter-buttons" id="categoryFilters">
             <button class="filter-btn active" data-category="All">All</button>
-            <button class="filter-btn" data-category="Cow">Cow</button>
-            <button class="filter-btn" data-category="Buffalo">Buffalo</button>
-            <button class="filter-btn" data-category="Goat">Goat</button>
+            <button class="filter-btn" data-category="Raw">Raw Honey</button>
+            <button class="filter-btn" data-category="Infused">Infused Honey</button>
+            <button class="filter-btn" data-category="Comb">Honeycomb</button>
           </div>
         </div>
       </section>
       
       <section class="products-section">
         <div class="container">
-          <h2 class="section-title" id="categoryTitle">All Cattle</h2>
+          <h2 class="section-title" id="categoryTitle">All Honey Products</h2>
           
           <div class="products-grid" id="productsGrid">
             <!-- Products will be dynamically inserted here -->
@@ -832,6 +887,42 @@
         </div>
       </section>
     </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-title">HoneyHaven</h3>
+            <p class="footer-text">
+              Premium honey products from our ethical and sustainable apiaries. 
+              We're committed to supporting bee populations and producing the finest quality honey.
+            </p>
+          </div>
+          
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Home</a></li>
+              <li><a href="#" class="footer-link">Honey Products</a></li>
+              <li><a href="#" class="footer-link">Beekeeping Supplies</a></li>
+              <li><a href="#" class="footer-link">About Us</a></li>
+              <li><a href="#" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="footer-title">Contact Us</h4>
+            <p class="footer-text">123 Bee Lane<br>Honey Valley, HV 12345</p>
+            <p class="footer-text">Email: info@honeyhaven.com<br>Phone: (123) 456-7890</p>
+          </div>
+        </div>
+        
+        <div class="copyright">
+          &copy; 2023 HoneyHaven. All rights reserved.
+        </div>
+      </div>
+    </footer>
     
     <!-- Cart Component -->
     <div class="cart-overlay" id="cartOverlay"></div>
@@ -889,52 +980,52 @@
     // Data - Products
     const products = [
       {
-        id: 'cow-holstein',
-        name: 'Holstein Cow',
-        price: 1200,
-        image: 'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        category: 'Cow',
-        description: 'A high-yielding dairy cow breed known for impressive milk production and distinctive black and white markings.'
+        id: 'raw-wildflower',
+        name: 'Raw Wildflower Honey',
+        price: 12.99,
+        image: 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        category: 'Raw',
+        description: 'Unfiltered, pure wildflower honey collected from diverse floral sources. Rich in flavor and natural enzymes.'
       },
       {
-        id: 'cow-jersey',
-        name: 'Jersey Cow',
-        price: 1500,
-        image: 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        category: 'Cow',
-        description: 'Known for producing milk with high butterfat content, this breed is adaptable and efficient.'
+        id: 'raw-clover',
+        name: 'Raw Clover Honey',
+        price: 10.99,
+        image: 'https://images.unsplash.com/photo-1601063476271-a159c71ab0b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        category: 'Raw',
+        description: 'Light, mild honey with a delicate floral taste. Sourced from bees pollinating clover fields.'
       },
       {
-        id: 'buffalo-murrah',
-        name: 'Murrah Buffalo',
-        price: 1800,
-        image: 'https://images.unsplash.com/photo-1598715474792-47dcbf3c9306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        category: 'Buffalo',
-        description: 'A premium buffalo breed known for high milk yield with excellent fat content, perfect for dairy farming.'
+        id: 'honeycomb-square',
+        name: 'Pure Honeycomb Square',
+        price: 15.99,
+        image: 'https://images.unsplash.com/photo-1479247183739-3c87f32a6109?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        category: 'Comb',
+        description: 'Natural honeycomb cut straight from the hive. Enjoy the honey and the edible wax together.'
       },
       {
-        id: 'goat-saanen',
-        name: 'Saanen Goat',
-        price: 350,
-        image: 'https://images.unsplash.com/photo-1533318087102-b3ad366ed041?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        category: 'Goat',
-        description: 'A Swiss dairy goat breed known for its high milk production and docile temperament.'
+        id: 'infused-lavender',
+        name: 'Lavender Infused Honey',
+        price: 14.99,
+        image: 'https://images.unsplash.com/photo-1628630500614-1c8924c99c3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        category: 'Infused',
+        description: 'Our wildflower honey delicately infused with organic lavender. Perfect for teas and desserts.'
       },
       {
-        id: 'cow-angus',
-        name: 'Angus Cow',
-        price: 1600,
-        image: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        category: 'Cow',
-        description: 'A beef cattle breed known for producing high-quality, well-marbled meat with excellent taste.'
+        id: 'raw-buckwheat',
+        name: 'Raw Buckwheat Honey',
+        price: 13.99,
+        image: 'https://images.unsplash.com/photo-1592151746321-00ab4df37b26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        category: 'Raw',
+        description: 'Bold, robust honey with a deep molasses-like flavor. High in antioxidants and minerals.'
       },
       {
-        id: 'goat-boer',
-        name: 'Boer Goat',
-        price: 450,
-        image: 'https://images.unsplash.com/photo-1524764517448-b7e78dcb1a1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        category: 'Goat',
-        description: 'A meat goat breed with fast growth rates and excellent meat quality, highly adaptable to various climates.'
+        id: 'infused-cinnamon',
+        name: 'Cinnamon Spiced Honey',
+        price: 14.99,
+        image: 'https://images.unsplash.com/photo-1622597467836-f3e9a7dabe0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        category: 'Infused',
+        description: 'Warm, spiced honey infused with Ceylon cinnamon. A perfect topping for breakfast foods.'
       }
     ];
 
@@ -1007,7 +1098,7 @@
         
         // Get selected category and render products
         const category = e.target.dataset.category;
-        categoryTitle.textContent = `${category} Cattle`;
+        categoryTitle.textContent = category === 'All' ? 'All Honey Products' : `${category} Products`;
         renderProducts(category);
       }
     }
@@ -1150,7 +1241,7 @@
               <path d="M16 10a4 4 0 0 1-8 0"/>
             </svg>
             <h3 class="empty-cart-title">Your cart is empty</h3>
-            <p class="empty-cart-text">Add some products to your cart and they will appear here</p>
+            <p class="empty-cart-text">Add some honey products to your cart and they will appear here</p>
             <button class="continue-shopping-btn" id="continueShoppingBtn">
               Continue Shopping
             </button>
@@ -1266,3 +1357,4 @@
   </script>
 </body>
 </html>
+
