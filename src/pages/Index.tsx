@@ -29,28 +29,22 @@ const Index = () => {
   // Featured sections
   const featuredSections = [
     {
-      title: "Heritage Bees",
-      description: "Explore our selection of rare and heritage bee breeds, raised with care and ethical practices.",
-      image: "https://images.unsplash.com/photo-1587049633312-d628ae40a0fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/heritage"
+      title: "Premium Cattle",
+      description: "Explore our selection of high-quality cattle breeds, raised with care and ethical practices.",
+      image: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      link: "/cattle"
     },
     {
-      title: "Premium Honey",
-      description: "Discover our selection of premium honey products, including raw, comb, and specialty infused varieties.",
-      image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/honey"
+      title: "Fresh Dairy Products",
+      description: "Discover our farm-fresh dairy products, sourced directly from our healthy, pasture-raised cattle.",
+      image: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      link: "/dairy"
     },
     {
-      title: "Beekeeping Supplies",
-      description: "Find everything you need for successful beekeeping - from equipment and protective gear to hive maintenance products.",
+      title: "Farming Essentials",
+      description: "Find everything you need for successful cattle farming and dairy production.",
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       link: "/needs"
-    },
-    {
-      title: "Honey Production",
-      description: "Maximize your honey production with our selection of beekeeping products and essential supplies.",
-      image: "https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/honey"
     }
   ];
   
@@ -60,8 +54,8 @@ const Index = () => {
       <section className="relative h-[80vh] min-h-[600px] overflow-hidden flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1587049633312-d628ae40a0fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Honey and beekeeping"
+            src="https://images.unsplash.com/photo-1552627019-947c3789ffb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Farm landscape with cattle"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -75,11 +69,11 @@ const Index = () => {
             className="max-w-3xl text-white"
           >
             <h1 className="text-4xl md:text-6xl font-semibold mb-6">
-              HoneyHaven - Premium Bee Farm Products
+              Premium Cattle and Dairy Products
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl">
-              Experience the finest selection of ethically produced honey and bee-related products 
-              for your culinary and beekeeping needs.
+              Experience the finest selection of ethically raised cattle and farm-fresh dairy products 
+              for your agricultural and consumption needs.
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.div
@@ -87,10 +81,10 @@ const Index = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Link 
-                  to="/honey" 
+                  to="/cattle" 
                   className="bg-white text-black px-8 py-3 rounded-lg font-medium inline-flex items-center"
                 >
-                  Explore Honey
+                  Explore Cattle
                   <ChevronRight size={18} className="ml-2" />
                 </Link>
               </motion.div>
@@ -99,10 +93,10 @@ const Index = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Link 
-                  to="/heritage" 
+                  to="/dairy" 
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium inline-flex items-center"
                 >
-                  Heritage Bees
+                  Browse Dairy Products
                 </Link>
               </motion.div>
             </div>
@@ -123,7 +117,7 @@ const Index = () => {
           </motion.h2>
           
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -170,10 +164,10 @@ const Index = () => {
           >
             <h2 className="text-3xl font-semibold mb-8">What Our Customers Say</h2>
             <blockquote className="text-xl text-gray-600 italic mb-6">
-              "The quality of honey and beekeeping products from HoneyHaven has been exceptional. 
-              Their commitment to ethical beekeeping practices and customer service sets them apart in the industry."
+              "The quality of cattle and dairy products from FarmFresh has been exceptional. 
+              Their commitment to ethical farming practices and customer service sets them apart in the industry."
             </blockquote>
-            <p className="font-medium">Sarah M. — Beekeeper</p>
+            <p className="font-medium">John D. — Dairy Farmer</p>
           </motion.div>
         </div>
       </section>
@@ -183,28 +177,28 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">HoneyHaven</h3>
+              <h3 className="text-xl font-semibold mb-4">FarmFresh</h3>
               <p className="text-gray-400">
-                Premium honey and bee farm products for your culinary and beekeeping needs.
+                Premium cattle and dairy products for your agricultural and consumption needs.
               </p>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/heritage" className="text-gray-400 hover:text-white transition-colors">Heritage Bees</Link></li>
-                <li><Link to="/honey" className="text-gray-400 hover:text-white transition-colors">Honey Products</Link></li>
-                <li><Link to="/needs" className="text-gray-400 hover:text-white transition-colors">Beekeeping Supplies</Link></li>
+                <li><Link to="/cattle" className="text-gray-400 hover:text-white transition-colors">Cattle</Link></li>
+                <li><Link to="/dairy" className="text-gray-400 hover:text-white transition-colors">Dairy Products</Link></li>
+                <li><Link to="/needs" className="text-gray-400 hover:text-white transition-colors">Farming Needs</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-4">Contact Us</h4>
-              <p className="text-gray-400 mb-2">Email: info@honeyhaven.com</p>
+              <p className="text-gray-400 mb-2">Email: info@farmfresh.com</p>
               <p className="text-gray-400">Phone: (123) 456-7890</p>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-            <p>© {new Date().getFullYear()} HoneyHaven. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} FarmFresh. All rights reserved.</p>
           </div>
         </div>
       </footer>
