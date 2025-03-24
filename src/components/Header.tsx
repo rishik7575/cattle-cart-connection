@@ -34,9 +34,9 @@ const Header = () => {
   // Navigation links
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Heritage Breeds', path: '/heritage' },
-    { name: 'Poultry', path: '/poultry' },
-    { name: 'Farming Needs', path: '/needs' },
+    { name: 'Cattle', path: '/cattle' },
+    { name: 'Dairy Products', path: '/dairy' },
+    { name: 'Needs', path: '/needs' },
   ];
   
   return (
@@ -49,7 +49,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="text-2xl font-semibold">
-            PoultryFresh
+            FarmFresh
           </Link>
           
           {/* Desktop Navigation */}

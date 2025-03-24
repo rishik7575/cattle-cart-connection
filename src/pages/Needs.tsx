@@ -15,52 +15,52 @@ const Needs = () => {
       setTimeout(() => {
         setProducts([
           {
-            id: 'feed-poultry',
-            name: 'Premium Poultry Feed',
-            price: 24.99,
+            id: 'feed-premium',
+            name: 'Premium Cattle Feed',
+            price: 45.99,
             image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'needs',
-            description: 'High-quality mixed feed formulated for optimal poultry nutrition and health.'
+            description: 'High-quality mixed feed formulated for optimal cattle nutrition and health.'
           },
           {
-            id: 'incubator-digital',
-            name: 'Digital Egg Incubator',
-            price: 129.99,
+            id: 'milking-machine',
+            name: 'Portable Milking Machine',
+            price: 899.99,
             image: 'https://images.unsplash.com/photo-1597824243857-15466d0122c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'needs',
-            description: 'Automatic egg incubator with digital temperature and humidity control for optimal hatching results.'
+            description: 'Efficient and easy-to-use milking machine suitable for small to medium dairy operations.'
           },
           {
-            id: 'brooder-lamp',
-            name: 'Infrared Brooder Lamp',
-            price: 34.99,
+            id: 'cattle-brush',
+            name: 'Automatic Cattle Brush',
+            price: 249.99,
             image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'needs',
-            description: 'Essential heat source for newly hatched chicks, ducklings, and other poultry.'
+            description: 'Self-activated brush that helps maintain cattle hygiene and reduces stress.'
           },
           {
-            id: 'feeder-automatic',
-            name: 'Automatic Poultry Feeder',
-            price: 49.99,
+            id: 'feeding-trough',
+            name: 'Cattle Feeding Trough',
+            price: 129.99,
             image: 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'needs',
-            description: 'Time-saving automatic feeder that reduces waste and keeps feed fresh and clean.'
+            description: 'Durable, easy-to-clean feeding trough designed for efficient cattle feeding.'
           },
           {
-            id: 'coop-cleaner',
-            name: 'Poultry Coop Cleaner',
-            price: 18.50,
+            id: 'dairy-chemicals',
+            name: 'Dairy Cleaning Solutions Set',
+            price: 79.99,
             image: 'https://images.unsplash.com/photo-1580256081112-e49377338b7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'needs',
-            description: 'Biodegradable cleaner that eliminates odors and harmful bacteria in poultry coops.'
+            description: 'Complete set of cleaning and sanitizing solutions for dairy equipment.'
           },
           {
-            id: 'egg-candler',
-            name: 'LED Egg Candler',
-            price: 22.99,
+            id: 'cattle-monitoring',
+            name: 'Smart Cattle Monitoring System',
+            price: 349.99,
             image: 'https://images.unsplash.com/photo-1553376397-3765e4e8e8a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             category: 'needs',
-            description: 'High-intensity LED candler for checking egg fertility and embryo development.'
+            description: 'IoT-based monitoring system to track cattle health, location, and activity.'
           }
         ]);
         setIsLoading(false);
@@ -71,7 +71,7 @@ const Needs = () => {
   }, []);
   
   // Filter categories
-  const categories = ['All', 'Feed', 'Equipment', 'Health', 'Maintenance'];
+  const categories = ['All', 'Equipment', 'Feed', 'Health', 'Maintenance'];
   const [activeCategory, setActiveCategory] = useState('All');
   
   const filteredProducts = activeCategory === 'All' 
@@ -99,7 +99,7 @@ const Needs = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1509115046493-d2621e0e1504?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Poultry farming equipment"
+            alt="Farm equipment"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30" />
@@ -112,9 +112,9 @@ const Needs = () => {
             transition={{ duration: 0.6 }}
             className="max-w-2xl text-white"
           >
-            <h1 className="text-3xl md:text-5xl font-semibold mb-4">Poultry Farming Needs</h1>
+            <h1 className="text-3xl md:text-5xl font-semibold mb-4">Farming Needs</h1>
             <p className="text-lg text-white/90">
-              Everything you need for successful poultry raising - from feed and equipment to health and maintenance supplies.
+              Everything you need for successful cattle raising and dairy production.
             </p>
           </motion.div>
         </div>
