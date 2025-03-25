@@ -19,10 +19,10 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
       <BrowserRouter>
         <CartProvider>
+          <Toaster />
+          <Sonner />
           <div className="min-h-screen">
             <Header />
             <Cart />
