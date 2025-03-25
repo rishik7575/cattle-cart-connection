@@ -36,6 +36,7 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Cattle', path: '/cattle' },
     { name: 'Dairy Products', path: '/dairy' },
+    { name: 'Poultry', path: '/poultry' },
     { name: 'Needs', path: '/needs' },
   ];
   

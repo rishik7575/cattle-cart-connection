@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Cattle from "./pages/Cattle";
 import Dairy from "./pages/Dairy";
 import Needs from "./pages/Needs";
+import Poultry from "./pages/Poultry";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
@@ -31,6 +32,7 @@ const App = () => (
                 <Route path="/cattle" element={<Cattle />} />
                 <Route path="/dairy" element={<Dairy />} />
                 <Route path="/needs" element={<Needs />} />
+                <Route path="/poultry" element={<Poultry />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
