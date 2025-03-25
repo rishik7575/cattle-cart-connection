@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 
 // Type for poultry products
 interface PoultryProduct {
-  id: number;
+  id: string;
   name: string;
   price: number;
   category: string;
@@ -23,7 +23,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
   // Simulate API call
   return [
     {
-      id: 1,
+      id: "1",
       name: "Fresh Eggs",
       price: 5.99,
       category: "eggs",
@@ -31,7 +31,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
       description: "Farm fresh eggs from free-range chickens"
     },
     {
-      id: 2,
+      id: "2",
       name: "Whole Chicken",
       price: 12.99,
       category: "meat",
@@ -39,7 +39,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
       description: "Free-range whole chicken"
     },
     {
-      id: 3,
+      id: "3",
       name: "Chicken Breast",
       price: 8.99,
       category: "meat",
@@ -47,7 +47,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
       description: "Boneless, skinless chicken breast"
     },
     {
-      id: 4,
+      id: "4",
       name: "Chicken Thighs",
       price: 7.49,
       category: "meat",
@@ -55,7 +55,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
       description: "Juicy chicken thighs"
     },
     {
-      id: 5,
+      id: "5",
       name: "Duck Eggs",
       price: 8.99,
       category: "eggs",
@@ -63,7 +63,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
       description: "Farm fresh duck eggs"
     },
     {
-      id: 6,
+      id: "6",
       name: "Quail Eggs",
       price: 9.99,
       category: "eggs",
@@ -71,7 +71,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
       description: "Small but nutritious quail eggs"
     },
     {
-      id: 7,
+      id: "7",
       name: "Duck Breast",
       price: 14.99,
       category: "meat",
@@ -79,7 +79,7 @@ const fetchPoultryProducts = async (): Promise<PoultryProduct[]> => {
       description: "Premium duck breast"
     },
     {
-      id: 8,
+      id: "8",
       name: "Organic Chicken Feed",
       price: 19.99,
       category: "supplies",
@@ -108,7 +108,8 @@ const Poultry = () => {
       name: product.name,
       price: product.price,
       image: product.image,
-      quantity: 1
+      category: product.category,
+      description: product.description
     });
     toast(`Added ${product.name} to cart`);
   };
